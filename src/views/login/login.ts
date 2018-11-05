@@ -8,6 +8,6 @@ export default class Login extends Vue {
   pwd: string = ''
 
   mounted() {
-    console.log(1111);
+    console.log(1111)
   }
 }
