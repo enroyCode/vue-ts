@@ -1,17 +1,17 @@
 <template>
   <div class="login">
     <el-form>
-      <el-form-item>
+      <el-form-item label="用户名">
         <el-input v-model="name"></el-input>
       </el-form-item>
-      <el-form-item>
+      <el-form-item label="密码">
         <el-input v-model="pwd"></el-input>
       </el-form-item>
     </el-form>
   </div>
 </template>
 
-<script lang="ts" src="login.ts"></script>
+<script lang="ts" src="./login.ts"></script>
 <style lang="scss">
   .login {
 

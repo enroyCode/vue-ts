@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <zc-frame>
-
-    </zc-frame>
+    <img src="./assets/logo.png"/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-  import ZcFrame from '@/components/frame/zc-frame.vue'
+<script lang="ts">
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
 
-  export default {
-    name: 'App',
-    components: {
-      ZcFrame
-    }
+  @Component({})
+  export default class App extends Vue {
   }
 </script>
 
@@ -26,4 +23,5 @@
     color: #2c3e50;
     margin-top: 60px;
   }
+
 </style>
