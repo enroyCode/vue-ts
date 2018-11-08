@@ -1,5 +1,5 @@
 export default class Ucn {
-  id: Nullable<string>;
+  uuid: Nullable<string>;
   code: Nullable<string>;
   name: Nullable<string>;
 }

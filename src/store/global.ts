@@ -1,6 +1,6 @@
 import { Commit, ActionTree } from 'vuex'
-import User from '../modal/user/User';
-import { SET_USER } from 'store/mutation-types';
+import User from '../model/user/User.ts';
+import { SET_USER } from './mutation-types.ts';
 
 export interface State {
   user: Nullable<User>
@@ -14,7 +14,7 @@ export const state: State = {
  * @type {{}}
  */
 export const mutations = {
-  [SET_USER](state, data) {
+  [SET_USER](state: State, data: User) {
     // localStorage.user = CryptoJS.AES.encrypt(JSON.stringify(data), secretKey);
     state.user = data;
   },

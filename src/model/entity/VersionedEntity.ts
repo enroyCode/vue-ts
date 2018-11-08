@@ -1,4 +1,4 @@
-import Entity from 'model/entity/Entity'
+import Entity from './Entity'
 
 export default class VersionedEntity extends Entity {
   version: number;

@@ -8,6 +8,7 @@
         <el-input v-model="pwd"></el-input>
       </el-form-item>
     </el-form>
+    <el-button @click="login">登录</el-button>
   </div>
 </template>
 
