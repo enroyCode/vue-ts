@@ -2,6 +2,7 @@ import axios from 'axios'
 import CommonUtil from '../utils/CommonUtil.ts'
 import router from '../router/index.js'
 import store from '../store/index'
+import config from '../../auth-config.js'
 
 const qs = require('qs');
 const SC_LOGIN_OUT = '1001';
@@ -48,7 +49,7 @@ export default class ApiClient {
           store.dispatch('clear');//清空store
           router.replace({
             path: '/login',
-            query: { redirect: router.currentRoute.fullPath }
+            query: { redirect: config.loginUrl }
           });
         }
         throw error;
