@@ -1,7 +1,10 @@
 import axios from 'axios'
 import CommonUtil from '../utils/CommonUtil.ts'
+import router from '../router/index.js'
+import store from '../store/index'
 
 const qs = require('qs');
+const SC_LOGIN_OUT = '1001';
 axios.defaults.paramsSerializer = params => {
   return qs.stringify(params, { arrayFormat: 'repeat' })
 };
@@ -37,9 +40,17 @@ export default class ApiClient {
       }
       if (response.data.success) {
         return response
-      } else {
+      } else {//请求错误
         let error = new Error();
         error.message = response.data.message;
+        if (response.data.code && response.data.code === SC_LOGIN_OUT) {
+          //todo 登出
+          store.dispatch('clear');//清空store
+          router.replace({
+            path: '/login',
+            query: { redirect: router.currentRoute.fullPath }
+          });
+        }
         throw error;
       }
     }, function (error) {

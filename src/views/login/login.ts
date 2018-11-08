@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import LoginApi from '../../api/login/LoginApi.ts';
+import { SET_USER } from '../../store/mutation-types';
 
 @Component({})
 export default class Login extends Vue {
@@ -15,7 +16,9 @@ export default class Login extends Vue {
   login() {
     let body = { principle: this.name, password: this.pwd };
     LoginApi.login(body).then(res => {
-      console.log(res)
+      if (res.data.success) {
+        this.$store.commit(SET_USER, res.data.data.employee);
+      }
     }).catch(e => {
       console.log(e)
     });
