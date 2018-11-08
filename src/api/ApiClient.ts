@@ -1,8 +1,12 @@
 import axios from 'axios'
 import CommonUtil from '../utils/CommonUtil.ts'
 
+const qs = require('qs');
+axios.defaults.paramsSerializer = params => {
+  return qs.stringify(params, { arrayFormat: 'repeat' })
+};
 axios.defaults.timeout = 60000;
-const baseUrl = 'localhost:8080';
+const baseUrl = 'http://localhost:8081/boot-service';
 export default class ApiClient {
 
   static getHttp(url: string, params: any) {
@@ -10,7 +14,7 @@ export default class ApiClient {
   }
 
   static postHttp(url: string, body: any, params?: any) {
-    return this.create(baseUrl).post(url, { params: params, data: body });
+    return this.create(baseUrl).post(url, body, { params: params });
   }
 
   static create(baseUrl: string) {
@@ -21,6 +25,7 @@ export default class ApiClient {
 
     instance.interceptors.request.use(function (config) {
       config.headers['trace_id'] = CommonUtil.uuid();
+      config.headers['Content-Type'] = 'application/json;charset=UTF-8';
       return config
     }, function (error) {
       return Promise.reject(error)

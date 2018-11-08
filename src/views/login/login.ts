@@ -13,7 +13,7 @@ export default class Login extends Vue {
   }
 
   login() {
-    let body = { username: this.name, password: this.pwd };
+    let body = { principle: this.name, password: this.pwd };
     LoginApi.login(body).then(res => {
       console.log(res)
     }).catch(e => {
