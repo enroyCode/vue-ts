@@ -44,7 +44,7 @@ export default class ApiClient {
         let error = new Error();
         error.message = response.data.message;
         if (response.data.code && response.data.code === SC_LOGIN_OUT) {
-          //todo 登出
+          // 登出
           store.dispatch('clear');//清空store
           router.replace({
             path: '/login',
