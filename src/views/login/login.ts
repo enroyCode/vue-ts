@@ -17,7 +17,7 @@ export default class Login extends Vue {
     LoginApi.login(body).then(res => {
       if (res.data.success) {
         this.$store.commit(SET_USER, res.data.data.employee);
-        this.$router.push('Home');
+        this.$router.push('/');
       }
     }).catch(e => {
       console.log(e)

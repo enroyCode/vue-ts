@@ -17,7 +17,7 @@ export default new Router({
       component: ZcFrame,
       children: [
         {
-          path: '/home',
+          path: '/',
           name: 'Home',
           component: resolve => require(['../views/home/home.vue'], resolve)
         }]
