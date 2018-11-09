@@ -3,22 +3,25 @@
     <el-aside width="200px">
       <zc-nav :nav="nav"></zc-nav>
     </el-aside>
-    <el-container>
-      <el-header>Header</el-header>
+    <el-container class="zc-container">
+      <el-header>
+        <!--<zc-breadcrumb :nav="nav"></zc-breadcrumb>-->
+      </el-header>
       <el-main>
         <router-view class="frame-router"></router-view>
       </el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer></el-footer>
     </el-container>
   </el-container>
 </template>
 <script type="text/ecmascript-6">
   import ZcNav from './zc-nav.vue';
+  import ZcBreadcrumb from './zc-breadcrumb.vue';
   import nav from '@/nav.js';
 
   export default {
     components: {
-      ZcNav
+      ZcNav, ZcBreadcrumb
     },
     data() {
       return {
@@ -34,6 +37,24 @@
     .el-aside {
       height: 100%;
       background-color: #D3DCE6;
+    }
+    .el-header {
+      width: 100%;
+      height: 40px;
+      padding: 0;
+      /*background-color: gray;*/
+    }
+    .zc-container {
+      min-height: 600px;
+      padding: 20px;
+      overflow: auto;
+      .el-main {
+        background-color: #eaeff3;
+        margin-top: 20px;
+      }
+    }
+    .el-footer {
+
     }
   }
 </style>
