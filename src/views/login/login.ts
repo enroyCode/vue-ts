@@ -6,18 +6,18 @@ import { SET_USER } from '../../store/mutation-types';
 @Component({})
 export default class Login extends Vue {
 
-  name: string = '';
-  pwd: string = '';
+  username: string = '';
+  password: string = '';
 
-  mounted() {
-    console.log(1111)
-  }
+  // mounted() {
+  // }
 
   login() {
-    let body = { principle: this.name, password: this.pwd };
+    let body = { principle: this.username, password: this.password };
     LoginApi.login(body).then(res => {
       if (res.data.success) {
         this.$store.commit(SET_USER, res.data.data.employee);
+        this.$router.push('Home');
       }
     }).catch(e => {
       console.log(e)
