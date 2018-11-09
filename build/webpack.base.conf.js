@@ -55,18 +55,24 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
-      }, {
+      }, {//ts文件加载
         test: /\.ts$/,
         exclude: /node_modules/,
         enforce: 'pre',
         loader: 'tslint-loader'
-      },
-      {
+      }, {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
           appendTsSuffixTo: [/\.vue$/],
+        }
+      }, {//字体文件加载
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]

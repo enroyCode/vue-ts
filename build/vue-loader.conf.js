@@ -13,8 +13,7 @@ module.exports = {
       extract: isProduction
     }), {
       ts: ['ts-loader', 'tslint-loader']
-    }
-  ),
+    }),
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
