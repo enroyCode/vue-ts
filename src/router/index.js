@@ -20,7 +20,7 @@ export default new Router({
       component: ZcFrame,
       children: [
         {
-          path: '/',
+          path: '/home',
           name: 'Home',
           component: resolve => require(['../views/home/home.vue'], resolve)
         }]
