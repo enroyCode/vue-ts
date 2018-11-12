@@ -1,51 +1,421 @@
 const nav = [
   {
-    title: '首页',
-    path: '/',
+    title: 'Vue介绍',
+    path: '/home',
     icon: 'el-icon-menu',
     display: false,
     children: []
   }, {
-    title: '项目管理',
-    path: '/projectMgr',
+    title: 'Vue基础',
+    path: '/basic',
     icon: 'el-icon-menu',
     display: true,
-    children: []
-  },
-  {
-    title: '用例管理',
-    path: '/testCaseMgr',
+    children: [{
+      title: 'Vue实例',
+      path: '/basic/instance',
+      display: true,
+      children: []
+    }, {
+      title: '模板语法',
+      path: '/basic/template',
+      display: true,
+      children: []
+    }, {
+      title: '计算属性',
+      path: '/basic/computed',
+      display: true,
+      children: []
+    }, {
+      title: '监听器',
+      path: '/basic/watch',
+      display: true,
+      children: []
+    }, {
+      title: 'class与style',
+      path: '/basic/css',
+      display: true,
+      children: []
+    }, {
+      title: '条件渲染',
+      path: '/basic/if',
+      display: true,
+      children: []
+    }, {
+      title: '列表渲染',
+      path: '/basic/for',
+      display: true,
+      children: []
+    }, {
+      title: '事件处理',
+      path: '/basic/event',
+      display: true,
+      children: []
+    }, {
+      title: '表单输入绑定',
+      path: '/basic/form',
+      display: true,
+      children: []
+    }, {
+      title: '组件基础',
+      path: '/basic/component',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: '深入组件',
+    path: '/component',
+    icon: 'el-icon-menu',
+    display: true,
+    children: [{
+      title: '组件注册',
+      path: '/component/subscribe',
+      display: true,
+      children: []
+    }, {
+      title: 'Prop',
+      path: '/component/prop',
+      display: true,
+      children: []
+    }, {
+      title: '自定义事件',
+      path: '/component/customEvent',
+      display: true,
+      children: []
+    }, {
+      title: '插槽',
+      path: '/component/slot',
+      display: true,
+      children: []
+    }, {
+      title: '动态组件',
+      path: '/component/dynamic',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: '过渡与动画',
+    path: '/animation',
+    icon: 'el-icon-menu',
+    display: true,
+    children: [{
+      title: '进入/离开',
+      path: '/animation/transition',
+      display: true,
+      children: []
+    }, {
+      title: '状态过渡',
+      path: '/animation/state',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: '可复用',
+    path: '/repeatable',
+    icon: 'el-icon-menu',
+    display: true,
+    children: [{
+      title: '混入',
+      path: '/repeatable/mixin',
+      display: true,
+      children: []
+    }, {
+      title: '自定义指令',
+      path: '/repeatable/directive',
+      display: true,
+      children: []
+    }, {
+      title: '渲染函数',
+      path: '/repeatable/render',
+      display: true,
+      children: []
+    }, {
+      title: '插件',
+      path: '/repeatable/plugin',
+      display: true,
+      children: []
+    }, {
+      title: '过滤器',
+      path: '/repeatable/filter',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: '规模化',
+    path: '/model',
+    icon: 'el-icon-menu',
+    display: true,
+    children: [{
+      title: '路由',
+      path: '/setting/router',
+      display: true,
+    }, {
+      title: '状态管理',
+      path: '/setting/store',
+      display: true,
+    }]
+  }, {
+    title: '深入响应式原理',
+    path: '/responsive',
     icon: 'el-icon-menu',
     display: true,
     children: []
   }, {
-    title: '测试计划',
-    path: '/testPlan',
+    title: 'Element-UI',
+    path: '/element',
     icon: 'el-icon-menu',
     display: true,
-    children: []
-  },
-  {
-    title: '测试报告',
-    path: '/testReport',
+    children: [{
+      title: '引入Element-UI',
+      path: '/element/import',
+      icon: 'el-icon-menu',
+      display: true,
+      children: []
+    }, {
+      title: 'Layout布局',
+      path: '/element/component/layout',
+      display: true,
+      children: []
+    }, {
+      title: 'Container布局容器',
+      path: '/element/component/container',
+      display: true,
+      children: []
+    }, {
+      title: 'Color',
+      path: '/element/component/color',
+      display: true,
+      children: []
+    }, {
+      title: 'typography字体',
+      path: '/element/component/typography',
+      display: true,
+      children: []
+    }, {
+      title: 'Icon图标',
+      path: '/element/component/icon',
+      display: true,
+      children: []
+    }, {
+      title: 'Button按钮',
+      path: '/element/component/button',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: 'form表单',
+    path: '/element/component',
     icon: 'el-icon-menu',
     display: true,
-    children: []
-  },
-  {
-    title: '系统设置',
-    path: '/setting',
-    icon: 'el-icon-menu',
+    children: [{
+      title: 'Radio单选框',
+      path: '/element/component/radio',
+      display: true,
+      children: []
+    }, {
+      title: 'Checkbox多选框',
+      path: '/element/component/checkbox',
+      display: true,
+      children: []
+    }, {
+      title: 'Input输入框',
+      path: '/element/component/input',
+      display: true,
+      children: []
+    }, {
+      title: 'InputNumber数字输入框',
+      path: '/element/component/inputNumber',
+      display: true,
+      children: []
+    }, {
+      title: 'Select选择框',
+      path: '/element/component/select',
+      display: true,
+      children: []
+    }, {
+      title: 'Cascader级联选择器',
+      path: '/element/component/cascader',
+      display: true,
+      children: []
+    }, {
+      title: 'Switch',
+      path: '/element/component/switch',
+      display: true,
+      children: []
+    }, {
+      title: 'slider滑块',
+      path: '/element/component/slider',
+      display: true,
+      children: []
+    }, {
+      title: 'timePicker',
+      path: '/element/component/timePicker',
+      display: true,
+      children: []
+    }, {
+      title: 'datePicker日期选择器',
+      path: '/element/component/datePicker',
+      display: true,
+      children: []
+    }, {
+      title: 'Upload上传',
+      path: '/element/component/upload',
+      display: true,
+      children: []
+    }, {
+      title: 'Rate评分',
+      path: '/element/component/rate',
+      display: true,
+      children: []
+    }, {
+      title: 'ColorPicker颜色选择器',
+      path: '/element/component/colorPicker',
+      display: true,
+      children: []
+    }, {
+      title: 'Transfer 穿梭框',
+      path: '/element/component/transfer',
+      display: true,
+      children: []
+    }, {
+      title: '表单',
+      path: '/element/component/form',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: 'Data',
+    path: '/element/component',
     display: true,
-    children: [
-      {
-        title: '人员权限',
-        icon: 'el-icon-menu',
-        path: '/setting/author',
-        display: true,
-      }
-    ]
-  }
-];
+    icon: 'el-icon-menu',
+    children: [{
+      title: '表格',
+      path: '/element/component/table',
+      display: true,
+      children: []
+    }, {
+      title: 'Tag 标签',
+      path: '/element/component/tag',
+      display: true,
+      children: []
+    }, {
+      title: 'Progress 进度条',
+      path: '/element/component/progress',
+      display: true,
+      children: []
+    }, {
+      title: 'Tree 树形控件',
+      path: '/element/component/tree',
+      display: true,
+      children: []
+    }, {
+      title: 'Pagination 分页',
+      path: '/element/component/pagination',
+      display: true,
+      children: []
+    }, {
+      title: 'Badge 标记',
+      path: '/element/component/badge',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: 'Notice',
+    path: '/element/component',
+    display: true,
+    icon: 'el-icon-menu',
+    children: [{
+      title: 'Alert 警告',
+      path: '/element/component/alert',
+      display: true,
+      children: []
+    }, {
+      title: 'Loading 加载',
+      path: '/element/component/loading',
+      display: true,
+      children: []
+    }, {
+      title: 'Message 消息提示',
+      path: '/element/component/message',
+      display: true,
+      children: []
+    }, {
+      title: 'MessageBox 弹框',
+      path: '/element/component/messageBox',
+      display: true,
+      children: []
+    }, {
+      title: 'Notification 通知',
+      path: '/element/component/notification',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: 'Navigation',
+    path: '/element/component',
+    display: true,
+    icon: 'el-icon-menu',
+    children: [{
+      title: 'NavMenu 导航菜单',
+      path: '/element/component/navMenu',
+      display: true,
+      children: []
+    }, {
+      title: 'Tabs 标签页',
+      path: '/element/component/tabs',
+      display: true,
+      children: []
+    }, {
+      title: 'Breadcrumb 面包屑',
+      path: '/element/component/breadcrumb',
+      display: true,
+      children: []
+    }, {
+      title: 'Dropdown 下拉菜单',
+      path: '/element/component/dropdown',
+      display: true,
+      children: []
+    }, {
+      title: 'Steps 步骤条',
+      path: '/element/component/steps',
+      display: true,
+      children: []
+    }]
+  }, {
+    title: 'others',
+    path: '/element/component',
+    display: true,
+    icon: 'el-icon-menu',
+    children: [{
+      title: 'Dialog 对话框',
+      path: '/element/component/dialog',
+      display: true,
+      children: []
+    }, {
+      title: 'Tooltip 文字提示',
+      path: '/element/component/tooltip',
+      display: true,
+      children: []
+    }, {
+      title: 'Popover 弹出框',
+      path: '/element/component/popover',
+      display: true,
+      children: []
+    }, {
+      title: 'Card 卡片',
+      path: '/element/component/card',
+      display: true,
+      children: []
+    }, {
+      title: 'Carousel 走马灯',
+      path: '/element/component/carousel',
+      display: true,
+      children: []
+    }, {
+      title: 'Collapse 折叠面板',
+      path: '/element/component/collapse',
+      display: true,
+      children: []
+    }]
+  }];
 
 export default nav;

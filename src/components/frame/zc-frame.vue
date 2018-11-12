@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-aside width="200px">
+    <el-aside>
       <zc-nav :nav="nav"></zc-nav>
     </el-aside>
     <el-container class="zc-container">
@@ -36,6 +36,7 @@
     height: 100%;
     background-color: #eaeff3;
     .el-aside {
+      width: 200px;
       height: 100%;
       background-color: #D3DCE6;
     }

@@ -25,6 +25,7 @@
     height: 100%;
     .el-menu {
       background-color: #D3DCE6;
+      text-align: left;
     }
   }
 </style>
