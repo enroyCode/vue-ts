@@ -7,5 +7,4 @@ import ZcPanel from '@/components/view/zc-panel.vue';
   }
 })
 export default class Layout extends Vue {
-
 }
