@@ -8,7 +8,7 @@
     "src/assets"
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "types": [
       // add node as an option
       "node"
@@ -20,16 +20,18 @@
     ],
     //这里根据自己项目的情况指定alias目录
     "paths": {
-      //      "@/*": ["src/*"],
-      "api/*": [
-        "src/api/*"
+      "@/*": [
+        "src/*"
       ],
+      //      "api/*": [
+      //        "src/api/*"
+      //      ],
       "model/*": [
         "src/model/*"
       ],
-      "components/*": [
-        "src/components/*"
-      ],
+      //      "components/*": [
+      //        "src/components/*"
+      //      ]
       "views/*": [
         "src/views/*"
       ],
