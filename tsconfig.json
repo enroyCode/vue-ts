@@ -8,7 +8,7 @@
     "src/assets"
   ],
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "types": [
       // add node as an option
       "node"
@@ -18,25 +18,17 @@
       // add path to @types
       "node_modules/@types"
     ],
+    //这里根据自己项目的情况指定alias目录
     "paths": {
       //      "@/*": ["src/*"],
-      "http/*": [
-        "src/http/*"
+      "api/*": [
+        "src/api/*"
       ],
       "model/*": [
         "src/model/*"
       ],
       "components/*": [
         "src/components/*"
-      ],
-      "cmd/*": [
-        "src/cmd/*"
-      ],
-      "mgr/*": [
-        "src/mgr/*"
-      ],
-      "example/*": [
-        "src/example/*"
       ],
       "views/*": [
         "src/views/*"
@@ -51,21 +43,25 @@
         "src/util/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
     // 启用 vue-class-component 及 vuex-class 需要开启此选项
-    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     // 启用 vuex-class 需要开启此选项
+    "experimentalDecorators": true,
     "strictFunctionTypes": false,
     "allowJs": true,
+    //模块采用import语法且不作转换，转换工作交给gulp任务中的webpack2
     "module": "es2015",
+    //语法编译为es5语法
     "target": "es5",
     // 以严格模式解析
     "strict": true,
     "noUnusedLocals": true,
+    //用NPM模式加载
     "moduleResolution": "node",
     "isolatedModules": true,
     // 在表达式和声明上有隐含的any类型时报错
     "noImplicitAny": true,
+    //识别基本的系统类库
     "lib": [
       "dom",
       "es5",

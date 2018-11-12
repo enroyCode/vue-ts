@@ -5,7 +5,7 @@
     </el-aside>
     <el-container class="zc-container">
       <el-header>
-        <!--<zc-breadcrumb :nav="nav"></zc-breadcrumb>-->
+        <zc-breadcrumb :nav="nav"></zc-breadcrumb>
       </el-header>
       <el-main>
         <router-view class="frame-router"></router-view>
@@ -34,6 +34,7 @@
 <style lang="scss">
   .el-container {
     height: 100%;
+    background-color: #eaeff3;
     .el-aside {
       height: 100%;
       background-color: #D3DCE6;
@@ -42,19 +43,17 @@
       width: 100%;
       height: 40px;
       padding: 0;
-      /*background-color: gray;*/
+      background-color: white;
     }
     .zc-container {
-      min-height: 600px;
-      padding: 20px;
-      overflow: auto;
+      /*min-height: 600px;
+      overflow: auto;*/
       .el-main {
-        background-color: #eaeff3;
         margin-top: 20px;
+        height: 100%;
       }
     }
     .el-footer {
-
     }
   }
 </style>

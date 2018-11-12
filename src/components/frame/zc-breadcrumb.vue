@@ -1,7 +1,9 @@
 <template>
-  <el-breadcrumb separator-class="el-icon-arrow-right">
-    <el-breadcrumb-item v-for="crumb in crumbs" :key="crumb.title">{{crumb.title}}</el-breadcrumb-item>
-  </el-breadcrumb>
+  <div class="zc-bread-crumb">
+    <el-breadcrumb separator-class="el-icon-arrow-right" v-if="false">
+      <el-breadcrumb-item v-for="crumb in crumbs" :key="crumb.title">{{crumb.title}}</el-breadcrumb-item>
+    </el-breadcrumb>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -72,11 +74,7 @@
 </script>
 
 <style lang="scss">
-  .el-container {
-    height: 100%;
-    .el-aside {
-      height: 100%;
-      background-color: #D3DCE6;
-    }
+  .zc-bread-crumb {
+
   }
 </style>
