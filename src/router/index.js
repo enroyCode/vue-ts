@@ -9,11 +9,14 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/',
+      redirect: '/home'//配置默认页面
+    }, {
       path: '/login',
       name: 'Login',
       component: Login
     }, {
-      path: '/',
+      path: '/home',
       component: ZcFrame,
       children: [
         {
