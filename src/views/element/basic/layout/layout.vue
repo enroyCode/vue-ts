@@ -20,13 +20,13 @@
       width: 100%;
       height: 100%;
     }
-    /*.title {
+    .title {
       float: left;
       font-weight: bold;
       font-size: 16px;
     }
     &-content {
       text-align: left;
-    }*/
+    }
   }
 </style>
