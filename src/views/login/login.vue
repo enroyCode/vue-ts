@@ -4,14 +4,14 @@
       <div class="login-content-form">
         <el-form label-width="80px">
           <el-form-item label="用户名">
-            <el-input v-model="username"></el-input>
+            <el-input v-model="username" prefix-icon="el-icon-edit"></el-input>
           </el-form-item>
           <el-form-item label="密码">
-            <el-input v-model="password"></el-input>
+            <el-input v-model="password" prefix-icon="el-icon-edit"></el-input>
           </el-form-item>
         </el-form>
       </div>
-      <el-button @click="login">登录</el-button>
+      <el-button @click="login" type="primary">登录</el-button>
     </div>
   </div>
 </template>
@@ -34,10 +34,13 @@
         .el-form {
           .el-form-item {
             .el-input {
-              width: 80%;
+              width: 90%;
             }
           }
         }
+      }
+      .el-button {
+        width: 120px;
       }
     }
   }
